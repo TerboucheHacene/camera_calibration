@@ -25,7 +25,7 @@ Camera calibration is the process of estimating a camera's intrinsic and extrins
 
 ### Parameters Estimated in Camera Calibration
 
-1. **Internal Parameters**:
+1. **Internal Parameters**: represented in the form of the intrinsic matrix (`K`), which includes:
    - Focal length
    - Optical center
    - Radial distortion coefficients
@@ -41,29 +41,6 @@ The calibration workflow typically involves:
 1. Capturing images of a known calibration pattern (e.g., checkerboard) from various viewpoints.
 2. Detecting and refining the corners of the calibration pattern in the images.
 3. Using the detected 2D-3D correspondences to estimate the camera's intrinsic matrix (`K`), rotation matrix (`R`), and translation vector (`t`).
-
-### Key Components of Calibration
-
-- **Intrinsic Matrix (`K`)**:
-  - Upper triangular matrix defined by:
-    ```
-    K = [[f_x, 0, c_x],
-         [0, f_y, c_y],
-         [0, 0, 1]]
-    ```
-  - Contains focal lengths (`f_x`, `f_y`) and optical center coordinates (`c_x`, `c_y`).
-
-- **Extrinsic Matrix**:
-  - Composed of rotation (`R`) and translation (`t`) parameters.
-
-### Output of Camera Calibration
-
-- **Intrinsic Matrix (`K`)**: Represents the camera's internal properties.
-- **Rotation (`R`) and Translation (`t`)**: Describe the camera's orientation and position in space.
-
-
-
-
 
 ## Installation
 
